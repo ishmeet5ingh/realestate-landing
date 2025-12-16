@@ -29,7 +29,7 @@ export default function Header() {
   return (
     <header 
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled 
+        scrolled || open
           ? 'bg-white shadow-lg' 
           : 'bg-transparent'
       }`}
@@ -39,7 +39,7 @@ export default function Header() {
       
       <div className="w-full px-4 sm:px-6 lg:px-20">
         <div className={`flex items-center justify-between transition-all duration-300 ${
-          scrolled ? 'h-16' : 'h-20'
+          scrolled || open ? 'h-16' : 'h-20'
         }`}>
           {/* Logo */}
           <a
@@ -50,7 +50,7 @@ export default function Header() {
             aria-label="SH Property"
           >
             <div className={`flex items-center gap-2 transition-all duration-300 ${
-              scrolled ? 'scale-90' : 'scale-100'
+              scrolled || open ? 'scale-90' : 'scale-100'
             }`}>
               <img
                 src="/reallogo.png"
@@ -76,7 +76,7 @@ export default function Header() {
             <a
               href="#contact"
               className={`px-6 py-2.5 rounded-full font-semibold transition-all duration-300 ${
-                scrolled 
+                scrolled || open
                   ? 'bg-red-600 text-white hover:bg-red-700' 
                   : 'bg-white text-black hover:bg-gray-100'
               }`}
@@ -88,7 +88,7 @@ export default function Header() {
           {/* Mobile menu button */}
           <button
             className={`md:hidden text-sm font-semibold transition-colors duration-300 ${
-              scrolled ? 'text-black' : 'text-white'
+              scrolled ? 'text-black' : 'text-black'
             }`}
             onClick={() => setOpen((v) => !v)}
             aria-expanded={open}
@@ -113,7 +113,7 @@ export default function Header() {
         {open && (
           <div className="md:hidden pb-4 animate-fadeIn">
             <div className={`flex flex-col gap-2 text-sm font-semibold ${
-              scrolled ? 'text-black' : 'text-white'
+              scrolled ? 'text-black' : 'text-black'
             }`}>
               {navItems.map((item) => (
                 <a
@@ -128,7 +128,7 @@ export default function Header() {
               <a
                 href="#contact"
                 className={`mt-2 px-6 py-2.5 rounded-full font-semibold text-center transition-all duration-300 ${
-                  scrolled 
+                  scrolled || open
                     ? 'bg-red-600 text-white hover:bg-red-700' 
                     : 'bg-white text-black hover:bg-gray-100'
                 }`}
