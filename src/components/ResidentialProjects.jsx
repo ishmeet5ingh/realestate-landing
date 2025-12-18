@@ -9,40 +9,36 @@ const ResidentialProjects = () => {
 const projects = [
   {
     id: 1,
-    developer: "PYRAMID", // Pyramid Infratech
+    developer: "PYRAMID",
     title: "Pyramid Alban",
-    image:
-      "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1400&q=60",
+    image: "/residential/pyramidalban.webp",
   },
   {
     id: 2,
     developer: "M3M",
     title: "Altitude at Golf Estate",
-    image:
-      "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1400&q=60",
+    image: "/residential/altitudeatgolfestate.webp",
   },
   {
     id: 3,
-    developer: "SMARTWORLD", // Smartworld Developers
+    developer: "SMARTWORLD",
     title: "The Edition",
-    image:
-      "https://images.unsplash.com/photo-1501594907352-04cda38ebc29?auto=format&fit=crop&w=1400&q=60",
+    image: "/residential/smarkworldtheedition.webp",
   },
   {
     id: 4,
     developer: "M3M",
     title: "M3M Crown",
-    image:
-      "https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=1400&q=60",
+    image: "/residential/m3mcrown.webp",
   },
   {
     id: 5,
     developer: "SMARTWORLD",
     title: "One DXP",
-    image:
-      "https://images.unsplash.com/photo-1496307653780-42ee777d4833?auto=format&fit=crop&w=1400&q=60",
+    image: "/residential/oneduplexsmartworld.webp",
   },
 ];
+
 
 
   // Keep scroll math aligned with card min-width + gap at each breakpoint
@@ -82,8 +78,8 @@ const projects = [
   return (
     <section className="bg-gradient-to-br from-red-50 via-white to-red-50 py-10 sm:py-14 lg:py-20 font-display overflow-hidden">
       {/* Header */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 overflow-visible">
-        <div className="text-center mb-8 sm:mb-12 lg:mb-16">
+      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 overflow-visible">
+        <div className="text-center mb-4 sm:mb-8 lg:mb-10">
           <div className="inline-flex items-center gap-2 bg-gradient-to-r from-red-600 to-red-700 text-white px-4 py-1.5 sm:px-6 sm:py-2 rounded-full text-xs sm:text-sm font-semibold mb-3 sm:mb-4 shadow-lg">
             <Building2 className="w-4 h-4" />
             <span>PREMIUM COLLECTION</span>
@@ -137,11 +133,11 @@ const projects = [
         </button>
 
         {/* Content constrained */}
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="relative -mr-4 sm:-mr-6 lg:-mr-8">
+        <div className="max-w-[1400px] mx-auto">
+          <div className="relative ">
             <div
               ref={scrollContainerRef}
-              className="flex gap-3 sm:gap-4 lg:gap-6 overflow-x-auto scrollbar-hide scroll-smooth pb-5 sm:pb-7 lg:pb-8"
+              className="flex gap-3 sm:gap-4 lg:gap-6 overflow-x-auto scrollbar-hide scroll-smooth pb-5 sm:pb-7 lg:pb-8 pt-5 sm:pt-10 px-4 sm:px-6"
               style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
             >
               {projects.map((project) => (
@@ -149,7 +145,7 @@ const projects = [
                   key={project.id}
                   className="min-w-[280px] sm:min-w-[340px] lg:min-w-[400px] group cursor-pointer"
                 >
-                  <div className="relative bg-white rounded-2xl sm:rounded-3xl overflow-hidden shadow-md sm:shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-1 sm:hover:-translate-y-2">
+                  <div className="relative bg-white rounded-2xl sm:rounded-3xl overflow-hidden shadow-md  hover:shadow-xl transition-all duration-500 transform hover:-translate-y-1 sm:hover:-translate-y-2">
                     {/* Image */}
                     <div className="relative h-52 sm:h-64 lg:h-80 overflow-hidden">
                       <img

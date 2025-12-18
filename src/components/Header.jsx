@@ -28,7 +28,7 @@ export default function Header() {
 
   return (
     <header 
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all font-display duration-300 ${
         scrolled || open
           ? 'bg-white shadow-lg' 
           : 'bg-transparent'
@@ -37,7 +37,7 @@ export default function Header() {
     >
       <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
       
-      <div className="w-full px-4 sm:px-6 lg:px-20">
+      <div className="w-full px-4 sm:px-6 lg:px-28">
         <div className={`flex items-center justify-between transition-all duration-300 ${
           scrolled || open ? 'h-16' : 'h-20'
         }`}>
@@ -75,7 +75,7 @@ export default function Header() {
             ))}
             <a
               href="#contact"
-              className={`px-6 py-2.5 rounded-full font-semibold transition-all duration-300 ${
+              className={`px-6 py-2.5 rounded-full font-medium transition-all duration-300 ${
                 scrolled || open
                   ? 'bg-red-600 text-white hover:bg-red-700' 
                   : 'bg-white text-black hover:bg-gray-100'
@@ -87,7 +87,7 @@ export default function Header() {
 
           {/* Mobile menu button */}
           <button
-            className={`md:hidden text-sm font-semibold transition-colors duration-300 ${
+            className={`md:hidden text-sm font-medium transition-colors duration-300 ${
               scrolled ? 'text-black' : 'text-black'
             }`}
             onClick={() => setOpen((v) => !v)}
@@ -112,7 +112,7 @@ export default function Header() {
         {/* Mobile dropdown */}
         {open && (
           <div className="md:hidden pb-4 animate-fadeIn">
-            <div className={`flex flex-col gap-2 text-sm font-semibold ${
+            <div className={`flex flex-col gap-2 text-sm font-medium ${
               scrolled ? 'text-black' : 'text-black'
             }`}>
               {navItems.map((item) => (
@@ -127,7 +127,7 @@ export default function Header() {
               ))}
               <a
                 href="#contact"
-                className={`mt-2 px-6 py-2.5 rounded-full font-semibold text-center transition-all duration-300 ${
+                className={`mt-2 px-6 py-2.5 rounded-full font-medium text-center transition-all duration-300 ${
                   scrolled || open
                     ? 'bg-red-600 text-white hover:bg-red-700' 
                     : 'bg-white text-black hover:bg-gray-100'
