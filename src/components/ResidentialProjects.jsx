@@ -1,62 +1,49 @@
 import React, { useEffect, useMemo, useRef, useState } from "react";
-import { ChevronLeft, ChevronRight, MapPin, Building2, Home } from "lucide-react";
+import { ChevronLeft, ChevronRight, Building2 } from "lucide-react"; // lucide-react icons [web:492]
 
 const ResidentialProjects = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const scrollContainerRef = useRef(null);
 
-  const projects = [
-    {
-      id: 1,
-      title: "Skyline Heights",
-      developer: "PREMIUM ESTATES",
-      location: "Downtown District",
-      image:
-        "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800&h=600&fit=crop",
-      units: "240 Units",
-      status: "Under Construction",
-    },
-    {
-      id: 2,
-      title: "Royal Residency",
-      developer: "LUXURY HOMES",
-      location: "Green Valley",
-      image:
-        "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800&h=600&fit=crop",
-      units: "180 Units",
-      status: "Ready to Move",
-    },
-    {
-      id: 3,
-      title: "Pearl Gardens",
-      developer: "METRO BUILD",
-      location: "City Center",
-      image:
-        "https://images.unsplash.com/photo-1460317442991-0ec209397118?w=800&h=600&fit=crop",
-      units: "320 Units",
-      status: "Launching Soon",
-    },
-    {
-      id: 4,
-      title: "Azure Heights",
-      developer: "SKYLINE CORP",
-      location: "Riverside Avenue",
-      image:
-        "https://images.unsplash.com/photo-1567496898669-ee935f5f647a?w=800&h=600&fit=crop",
-      units: "150 Units",
-      status: "Under Construction",
-    },
-    {
-      id: 5,
-      title: "Grand Plaza",
-      developer: "ELITE DEVELOPERS",
-      location: "Business District",
-      image:
-        "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=800&h=600&fit=crop",
-      units: "280 Units",
-      status: "Ready to Move",
-    },
-  ];
+  // Only fields used by the UI now: id, title, developer, image
+const projects = [
+  {
+    id: 1,
+    developer: "PYRAMID", // Pyramid Infratech
+    title: "Pyramid Alban",
+    image:
+      "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1400&q=60",
+  },
+  {
+    id: 2,
+    developer: "M3M",
+    title: "Altitude at Golf Estate",
+    image:
+      "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1400&q=60",
+  },
+  {
+    id: 3,
+    developer: "SMARTWORLD", // Smartworld Developers
+    title: "The Edition",
+    image:
+      "https://images.unsplash.com/photo-1501594907352-04cda38ebc29?auto=format&fit=crop&w=1400&q=60",
+  },
+  {
+    id: 4,
+    developer: "M3M",
+    title: "M3M Crown",
+    image:
+      "https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=1400&q=60",
+  },
+  {
+    id: 5,
+    developer: "SMARTWORLD",
+    title: "One DXP",
+    image:
+      "https://images.unsplash.com/photo-1496307653780-42ee777d4833?auto=format&fit=crop&w=1400&q=60",
+  },
+];
+
 
   // Keep scroll math aligned with card min-width + gap at each breakpoint
   const CARD = useMemo(() => {
@@ -122,7 +109,7 @@ const ResidentialProjects = () => {
         </div>
       </div>
 
-      {/* Carousel area (full width wrapper so arrows can sit outside 7xl) */}
+      {/* Carousel area */}
       <div className="relative w-full">
         {/* Arrows hidden on small screens */}
         <button
@@ -170,45 +157,24 @@ const ResidentialProjects = () => {
                         alt={project.title}
                         className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
                       />
+
                       <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/40 to-transparent" />
 
-                      {/* Status */}
-                      <div className="absolute top-3 right-3 sm:top-4 sm:right-4 bg-gradient-to-r from-red-600 to-red-700 text-white px-3 py-1.5 sm:px-4 sm:py-2 rounded-full text-[10px] sm:text-xs font-bold shadow-lg backdrop-blur-sm">
-                        {project.status}
-                      </div>
-
-                      {/* Developer */}
-                      <div className="absolute top-3 left-3 sm:top-4 sm:left-4 bg-white/95 text-rose-900 px-3 py-1.5 sm:px-4 sm:py-2 rounded-full text-[10px] sm:text-xs font-bold shadow-lg backdrop-blur-sm">
-                        {project.developer}
-                      </div>
-
-                      {/* Overlay content */}
+                      {/* ONLY 2 texts (developer + title) */}
                       <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-6">
-                        <h3 className="text-lg sm:text-xl lg:text-2xl font-semibold text-white mb-2 sm:mb-3">
+                        <div className="inline-flex items-center bg-teal-500/90 text-white px-4 py-2 rounded-md text-xs font-medium">
+                          {project.developer}
+                        </div>
+
+                        <h3 className="mt-3 text-lg sm:text-xl lg:text-2xl font-medium text-white">
                           {project.title}
                         </h3>
-
-                        <div className="flex items-center gap-4 sm:gap-6 text-white/90">
-                          <div className="flex items-center gap-1.5 sm:gap-2">
-                            <MapPin className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
-                            <span className="text-xs sm:text-sm font-medium">
-                              {project.location}
-                            </span>
-                          </div>
-
-                          <div className="flex items-center gap-1.5 sm:gap-2">
-                            <Home className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
-                            <span className="text-xs sm:text-sm font-medium">
-                              {project.units}
-                            </span>
-                          </div>
-                        </div>
                       </div>
                     </div>
 
                     {/* CTA */}
                     <div className="p-4 sm:p-6 bg-gradient-to-br from-white to-red-50">
-                      <button className="w-full bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white font-semibold text-sm sm:text-base py-2.5 sm:py-3 px-5 sm:px-6 rounded-xl transition-all duration-300 shadow-md hover:shadow-xl transform hover:scale-[1.02]">
+                      <button className="w-full bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white font-medium text-sm sm:text-base py-2.5 sm:py-3 px-5 sm:px-6 rounded-xl transition-all duration-300 shadow-md hover:shadow-xl transform hover:scale-[1.02]">
                         Explore Project
                       </button>
                     </div>

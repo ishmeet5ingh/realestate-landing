@@ -49,13 +49,13 @@ export default function Header() {
             }`}
             aria-label="SH Property"
           >
-            <div className={`flex items-center gap-2 transition-all duration-300 ${
+            <div className={`flex items-center gap-2 py-10 transition-all duration-300 ${
               scrolled || open ? 'scale-90' : 'scale-100'
             }`}>
               <img
-                src="/reallogo.png"
-                alt="SH Property"
-                className="h-10 w-auto"
+                src="/infratechlogo.png"
+                alt="infratechlogoy"
+                className="h-24 w-auto py-2"
               />
             </div>
           </a>

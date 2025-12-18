@@ -8,6 +8,9 @@ import PropertyShowcase from "./components/PropertyShowcase";
 import ResidentialProjects from "./components/ResidentialProjects";
 import TopCommercialProjects from "./components/TopCommercialProjects";
 import ContactUs from "./components/ContactUs";
+import BottomCardsMobile from "./components/BottomCardsMobile";
+import StatsExperience from "./components/StatsExperience";
+import WhyChooseUs2 from "./components/WhyChooseUs2";
 
 export default function App() {
   return (
@@ -15,11 +18,14 @@ export default function App() {
       <Header />
       <main>
         <Hero />
-        <PropertyShowcase/>
-        <WhyChooseUs />
+        <BottomCardsMobile />
+        <StatsExperience/>
+        {/* <PropertyShowcase/> */}
+        {/* <WhyChooseUs /> */}/
         <ResidentialProjects />
         <TopCommercialProjects/>
-        <ContactUs />
+        <WhyChooseUs2/>
+        {/* <ContactUs /> */}
       </main>
       <Footer />
     </div>
