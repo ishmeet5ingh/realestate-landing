@@ -21,7 +21,7 @@ const Footer = () => {
       </div>
 
       {/* Main Footer Content with Semi-transparent Container */}
-      <div className="relative z-10 max-w-[1500px] mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8 lg:py-10 ">
+      <div className="relative z-10 max-w-[1390px] mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8 lg:py-10 ">
         {/* Semi-transparent dark overlay container */}
         <div className="bg-black/70 backdrop-blur-sm rounded-lg p-8 sm:p-10 lg:p-12">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10 lg:gap-12 lg:divide-x lg:divide-white/20">
