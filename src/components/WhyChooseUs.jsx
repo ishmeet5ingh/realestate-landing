@@ -115,7 +115,7 @@ export default function WhyChooseUs() {
 
   return (
     <section id="why-choose-us" className="bg-white py-10 sm:py-14 lg:py-16 font-display">
-      <div className="mx-auto max-w-[1400px] px-4 sm:px-4 lg:px-0">
+      <div className="mx-auto max-w-[1350px] px-4 sm:px-4 lg:px-0">
         <div className="flex flex-col gap-8 sm:gap-10 lg:gap-12">
           {/* Heading Section */}
           <motion.div

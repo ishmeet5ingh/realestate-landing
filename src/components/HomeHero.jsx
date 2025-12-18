@@ -96,7 +96,7 @@ export default function Hero() {
 
       {/* Main Content - vertically centered on mobile, top-aligned on sm+ */}
       <div className="absolute top-1/2 -translate-y-1/2 sm:top-[25%] sm:translate-y-0 left-0 right-0">
-        <div className="mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-10">
+        <div className="mx-auto max-w-[1350px] px-4 sm:px-6 lg:px-10">
           <motion.div
             className="max-w-3xl text-left relative z-10"
             variants={container}
@@ -139,7 +139,7 @@ export default function Hero() {
       {/* Bottom 3 cards (half inside hero, half below) */}
       <div className="hidden md:block">
         <div className="absolute left-0 right-0 bottom-0 translate-y-1/2 z-20">
-          <div className="mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-10">
+          <div className="mx-auto max-w-[1350px] px-4 sm:px-6 lg:px-10">
             <div className="mx-auto max-w-6xl">
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-5">
                 {/* Card 1 */}

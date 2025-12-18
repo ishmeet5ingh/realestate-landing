@@ -78,7 +78,7 @@ const projects = [
   return (
     <section className="bg-gradient-to-br from-red-50 via-white to-red-50 py-10 sm:py-14 lg:py-20 font-display overflow-hidden">
       {/* Header */}
-      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 overflow-visible">
+      <div className="max-w-[1350px] mx-auto px-4 sm:px-6 lg:px-8 overflow-visible">
         <div className="text-center mb-4 sm:mb-8 lg:mb-10">
           <div className="inline-flex items-center gap-2 bg-gradient-to-r from-red-600 to-red-700 text-white px-4 py-1.5 sm:px-6 sm:py-2 rounded-full text-xs sm:text-sm font-semibold mb-3 sm:mb-4 shadow-lg">
             <Building2 className="w-4 h-4" />
@@ -133,7 +133,7 @@ const projects = [
         </button>
 
         {/* Content constrained */}
-        <div className="max-w-[1400px] mx-auto">
+        <div className="max-w-[1350px] mx-auto">
           <div className="relative ">
             <div
               ref={scrollContainerRef}

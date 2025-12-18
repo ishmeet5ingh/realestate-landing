@@ -60,7 +60,7 @@ const TopCommercialProjects = () => {
 
   return (
     <section className="bg-white text-black py-10 sm:py-14 lg:py-16 font-display overflow-hidden">
-      <div className="max-w-[1400px] mx-auto">
+      <div className="max-w-[1350px] mx-auto">
         {/* Header row (kept same) */}
         <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-4 sm:gap-6 px-4 sm:px-6 ">
           <div className="max-w-2xl">

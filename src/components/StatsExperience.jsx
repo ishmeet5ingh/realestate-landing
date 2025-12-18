@@ -8,7 +8,7 @@ export default function StatsExperience() {
       <div className="absolute inset-0 bg-[url('/pattern.webp')] bg-cover bg-center opacity-[0.08]" />
       {/* If you don't have pattern.webp, remove the line above or replace with your own pattern. */}
 
-      <div className="relative mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-10">
+      <div className="relative mx-auto max-w-[1350px] px-4 sm:px-6 lg:px-10">
         <div className="grid grid-cols-1 lg:grid-cols-3 items-center gap-10 lg:gap-6">
           {/* Left stats (from left) */}
           <motion.div

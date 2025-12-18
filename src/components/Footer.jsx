@@ -226,7 +226,7 @@ const Footer = () => {
       {/* Bottom Bar */}
       <div className="relative z-10 border-t border-white/20">
         <div className="bg-black/80 backdrop-blur-sm">
-          <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-6">
+          <div className="max-w-[1350px] mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-6">
             <div className="flex justify-center items-center text-xs sm:text-sm text-white/70">
               <p>© Copyright 2025 - Roots Infratech. ALL RIGHTS RESERVED.</p>
             </div>

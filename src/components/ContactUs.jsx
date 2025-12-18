@@ -16,7 +16,7 @@ const ContactUs = () => {
 
   return (
     <section id="contact" className="bg-white font-display py-10 sm:py-14 lg:py-16">
-      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-[1350px] mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-4 sm:gap-6 mb-6 sm:mb-10">
           <div className="max-w-2xl">

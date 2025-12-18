@@ -50,7 +50,7 @@ const items = [
 export default function WhyChooseUs2() {
   return (
     <section className="w-full bg-white py-10 sm:py-16 lg:py-20">
-      <div className="mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-10">
+      <div className="mx-auto max-w-[1350px] px-4 sm:px-6 lg:px-10">
         {/* Heading */}
         <div className="text-center">
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-gray-900">
