@@ -5,43 +5,49 @@ const ResidentialProjects = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const scrollContainerRef = useRef(null);
 
-  // Updated projects array
+  // Updated projects array with route paths
   const projects = [
     {
       id: 1,
       developer: "M3M",
       title: "GIC Manesar",
       image: "/residential/m3m-gic-manesar.jpeg",
+      route: "/new-launch/m3m-gic-manesar",
     },
     {
       id: 2,
       developer: "AURA WORLD",
       title: "Aura World",
       image: "/residential/aura-world.jpg",
+      route: null, // No route yet
     },
     {
       id: 3,
       developer: "SMARTWORLD",
       title: "Sky Arc",
       image: "/residential/smartworld-sky-arc.webp",
+      route: null,
     },
     {
       id: 4,
       developer: "SMARTWORLD",
       title: "The Edition",
       image: "/residential/smartworld-the-edition.webp",
+      route: null,
     },
     {
       id: 5,
       developer: "M3M",
       title: "Mansion",
       image: "/residential/m3m-mansion.webp",
+      route: null,
     },
     {
       id: 6,
       developer: "SMARTWORLD",
       title: "One DXP",
       image: "/residential/oneduplexsmartworld.webp",
+      route: null,
     },
   ];
 
@@ -141,43 +147,51 @@ const ResidentialProjects = () => {
               className="flex gap-3 sm:gap-4 lg:gap-6 overflow-x-auto scrollbar-hide scroll-smooth pb-5 sm:pb-7 lg:pb-8 pt-5 sm:pt-10 px-4 sm:px-6"
               style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
             >
-              {projects.map((project) => (
-                <div
-                  key={project.id}
-                  className="min-w-[250px] lg:min-w-[300px] group cursor-pointer"
-                >
-                  <div className="relative bg-white rounded-xl sm:rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-500 transform hover:-translate-y-1 sm:hover:-translate-y-2">
-                    {/* Image */}
-                    <div className="relative h-52 lg:h-64 overflow-hidden">
-                      <img
-                        src={project.image}
-                        alt={project.title}
-                        className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
-                      />
+              {projects.map((project) => {
+                const CardWrapper = project.route ? "a" : "div";
+                const wrapperProps = project.route
+                  ? { href: project.route }
+                  : {};
 
-                      <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/40 to-transparent" />
+                return (
+                  <CardWrapper
+                    key={project.id}
+                    {...wrapperProps}
+                    className="min-w-[250px] lg:min-w-[300px] group cursor-pointer block no-underline"
+                  >
+                    <div className="relative bg-white rounded-xl sm:rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-500 transform hover:-translate-y-1 sm:hover:-translate-y-2">
+                      {/* Image */}
+                      <div className="relative h-52 lg:h-64 overflow-hidden">
+                        <img
+                          src={project.image}
+                          alt={project.title}
+                          className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
+                        />
 
-                      {/* Developer + title */}
-                      <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-6">
-                        <div className="inline-flex items-center bg-teal-500/90 text-white px-4 py-2 rounded-md text-xs font-medium">
-                          {project.developer}
+                        <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/40 to-transparent" />
+
+                        {/* Developer + title */}
+                        <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-6">
+                          <div className="inline-flex items-center bg-teal-500/90 text-white px-4 py-2 rounded-md text-xs font-medium">
+                            {project.developer}
+                          </div>
+
+                          <h3 className="mt-3 text-lg sm:text-xl lg:text-2xl font-medium text-white">
+                            {project.title}
+                          </h3>
                         </div>
+                      </div>
 
-                        <h3 className="mt-3 text-lg sm:text-xl lg:text-2xl font-medium text-white">
-                          {project.title}
-                        </h3>
+                      {/* CTA */}
+                      <div className="p-4 sm:p-6 bg-gradient-to-br from-white to-red-50">
+                        <button className="w-full bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white font-medium text-sm py-2.5 px-5  rounded-xl transition-all duration-300 shadow-md hover:shadow-xl transform hover:scale-[1.02]">
+                          Explore Project
+                        </button>
                       </div>
                     </div>
-
-                    {/* CTA */}
-                    <div className="p-4 sm:p-6 bg-gradient-to-br from-white to-red-50">
-                      <button className="w-full bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white font-medium text-sm py-2.5 px-5  rounded-xl transition-all duration-300 shadow-md hover:shadow-xl transform hover:scale-[1.02]">
-                        Explore Project
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              ))}
+                  </CardWrapper>
+                );
+              })}
             </div>
 
             {/* Dots */}
