@@ -40,7 +40,7 @@ export default function Hero() {
     return () => clearInterval(t);
   }, [slides.length]);
 
-  // Determine if current slide needs dark overlay and text colors
+  // Only desktop/tablet slides 2 and 3 are considered dark
   const isDarkSlide = active === 1 || active === 2;
 
   return (
@@ -61,9 +61,9 @@ export default function Hero() {
         ))}
       </div>
 
-      {/* Dynamic dark overlay for banner2/banner3 */}
+      {/* Dynamic dark overlay for banner2/banner3 (sm and up only) */}
       {isDarkSlide && (
-        <div className="absolute inset-0 bg-black/40 z-10 transition-opacity duration-700" />
+        <div className="hidden sm:block absolute inset-0 bg-black/40 z-10 transition-opacity duration-700" />
       )}
 
       {/* Left Arrow */}
@@ -72,8 +72,8 @@ export default function Hero() {
         onClick={prev}
         aria-label="Previous slide"
         className="group hidden lg:flex absolute left-4 sm:left-8 top-1/2 -translate-y-1/2 z-30 h-12 w-12 rounded-full
-                     bg-white/90 hover:bg-red-600 shadow-lg items-center justify-center
-                     transition-colors duration-200"
+                   bg-white/90 hover:bg-red-600 shadow-lg items-center justify-center
+                   transition-colors duration-200"
       >
         <ChevronLeftIcon
           className="h-6 w-6 text-gray-700 group-hover:text-white transition-colors duration-200"
@@ -87,8 +87,8 @@ export default function Hero() {
         onClick={next}
         aria-label="Next slide"
         className="group hidden lg:flex absolute right-4 sm:right-8 top-1/2 -translate-y-1/2 z-30 h-12 w-12 rounded-full
-                     bg-white/90 hover:bg-red-600 shadow-lg items-center justify-center
-                     transition-colors duration-200"
+                   bg-white/90 hover:bg-red-600 shadow-lg items-center justify-center
+                   transition-colors duration-200"
       >
         <ChevronRightIcon
           className="h-6 w-6 text-gray-700 group-hover:text-white transition-colors duration-200"
@@ -96,7 +96,7 @@ export default function Hero() {
         />
       </button>
 
-      {/* Mobile overlay for readability */}
+      {/* Mobile overlay for readability (always black on < sm) */}
       <div className="absolute inset-0 sm:hidden bg-gradient-to-t from-black/90 via-black/60 to-black/30 z-20" />
 
       {/* Light overlay on larger screens (only for banner1) */}
@@ -113,10 +113,11 @@ export default function Hero() {
             initial="hidden"
             animate="show"
           >
+            {/* Below sm: force white; sm+ use old logic */}
             <motion.p
               variants={item}
               className={`text-xs sm:text-sm font-medium tracking-wide ${
-                isDarkSlide ? "text-white" : "text-red-500 sm:text-red-600 "
+                isDarkSlide ? "text-white" : "text-white sm:text-red-600"
               }`}
             >
               Trusted Real Estate Partner
@@ -135,7 +136,7 @@ export default function Hero() {
             <motion.p
               variants={item}
               className={`mt-3 sm:mt-4 text-xs sm:text-base leading-relaxed ${
-                isDarkSlide ? "text-white/85" : "sm:text-black/70"
+                isDarkSlide ? "text-white/85" : "text-white/85 sm:text-black/70"
               }`}
             >
               Explore premium residential and commercial options with a simple,
