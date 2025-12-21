@@ -54,7 +54,7 @@ const TopCommercialProjects = () => {
 
   return (
     <section className="bg-white text-black py-10 sm:py-14 lg:py-16 font-display overflow-hidden">
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-7xl mx-auto lg:px-20">
         {/* Header row (kept same) */}
         <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-4 sm:gap-6 px-4 sm:px-6 ">
           <div className="max-w-2xl">
@@ -100,19 +100,19 @@ const TopCommercialProjects = () => {
         <div className="mt-6 sm:mt-8">
           <div
             ref={scrollerRef}
-            className="flex gap-3 sm:gap-4 lg:gap-5 overflow-x-auto scroll-smooth pb-4 px-4 sm:px-6 "
+            className="flex gap-3 sm:gap-4 lg:gap-5 overflow-x-auto scroll-smooth pb-4 px-4 sm:px-6"
             style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
           >
             {projects.map((p) => (
               <article
                 key={p.id}
-                className="snap-start min-w-[280px] sm:min-w-[320px] lg:min-w-[360px]
+                className="snap-start min-w-[250px] lg:min-w-[300px]
              rounded-3xl overflow-hidden border border-black/10
              hover:shadow-xl hover:shadow-red-600/10 transition-all"
               >
                 {/* FULL card background */}
                 <div
-                  className="relative h-[300px] sm:h-[320px] lg:h-[360px] bg-cover bg-center"
+                  className="relative h-54  lg:h-64 bg-cover bg-center"
                   style={{ backgroundImage: `url(${p.image})` }}
                 >
                   {/* overlay */}

@@ -50,41 +50,41 @@ const items = [
 export default function WhyChooseUs2() {
   return (
     <section className="w-full bg-white py-10 sm:py-16 lg:py-20">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-10">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-20">
         {/* Heading */}
         <div className="text-center">
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-gray-900">
+          <h2 className="text-2xl sm:text-3xl lg:text-3xl font-semibold text-gray-900">
             Why Choose Us
           </h2>
 
           {/* simple divider */}
           <div className="mt-3 sm:mt-4 flex items-center justify-center gap-2 sm:gap-3">
-            <span className="h-px w-16 sm:w-24 bg-gray-300" />
+            <span className="h-px w-16 sm:w-24 lg:w-20 bg-gray-300" />
             <span className="h-1 w-1 sm:h-1.5 sm:w-1.5 rounded-full bg-gray-400" />
-            <span className="h-px w-16 sm:w-24 bg-gray-300" />
+            <span className="h-px w-16 sm:w-24 lg:w-20 bg-gray-300" />
           </div>
         </div>
 
         {/* Grid */}
-        <div className="mt-8 sm:mt-12 lg:mt-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-6 sm:gap-y-10 gap-x-6 sm:gap-x-10">
+        <div className="mt-8 sm:mt-12 lg:mt-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-6 sm:gap-y-10 gap-x-6 sm:gap-x-10 lg:gap-y-8 lg:gap-x-8">
           {items.map(({ no, title, desc, Icon }) => (
-            <div key={no} className="flex items-start gap-3 sm:gap-5">
+            <div key={no} className="flex items-start gap-3 sm:gap-5 lg:gap-4">
               {/* icon badge */}
               <div className="shrink-0">
-                <div className="h-20 w-20 sm:h-28 sm:w-28 lg:h-32 lg:w-32 rounded-full bg-gray-50 shadow-md flex items-center justify-center">
-                  <Icon className="h-10 w-10 sm:h-14 sm:w-14 lg:h-16 lg:w-16 text-red-400" aria-hidden="true" />
+                <div className="h-20 w-20 sm:h-28 sm:w-28 lg:h-24 lg:w-24 rounded-full bg-gray-50 shadow-md flex items-center justify-center">
+                  <Icon className="h-10 w-10 sm:h-14 sm:w-14 lg:h-12 lg:w-12 text-red-400" aria-hidden="true" />
                 </div>
               </div>
 
               {/* text */}
               <div className="pt-1">
-                <h3 className="text-base sm:text-lg font-semibold text-gray-900">{title}</h3>
+                <h3 className="text-base sm:text-lg lg:text-base font-semibold text-gray-900">{title}</h3>
 
-                <p className="mt-1.5 sm:mt-2 text-xs sm:text-sm lg:text-base text-gray-600 leading-relaxed">
+                <p className="mt-1.5 sm:mt-2 text-xs sm:text-sm lg:text-sm text-gray-600 leading-relaxed">
                   {desc}
                 </p>
 
-                <div className="mt-3 sm:mt-6 h-px w-full bg-gray-200" />
+                <div className="mt-3 sm:mt-6 lg:mt-4 h-px w-full bg-gray-200" />
               </div>
             </div>
           ))}

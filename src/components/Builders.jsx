@@ -17,7 +17,7 @@ export default function Builders() {
 
   return (
     <section className="bg-gray-50 py-12 sm:py-16 lg:py-20 font-display overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-20">
         {/* Header */}
         <div className="text-center mb-10 sm:mb-12">
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-gray-900">

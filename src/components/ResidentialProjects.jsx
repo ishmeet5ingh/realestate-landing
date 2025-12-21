@@ -109,34 +109,32 @@ const ResidentialProjects = () => {
 
       {/* Carousel area */}
       <div className="relative w-full">
-
-<button
-  onClick={() => scroll("left")}
-  className="hidden lg:block absolute left-2 sm:left-6 lg:left-10 top-1/2 -translate-y-1/2 z-20
+        <button
+          onClick={() => scroll("left")}
+          className="hidden lg:block absolute left-2 sm:left-6  top-1/2 -translate-y-1/2 z-20
              bg-white hover:bg-gradient-to-r hover:from-red-600 hover:to-red-700
              text-red-600 hover:text-white p-3.5 lg:p-4 rounded-full
              shadow-xl transition-all duration-300 hover:scale-110
              border border-red-100"
-  aria-label="Previous"
->
-  <ChevronLeft className="w-6 h-6" />
-</button>
+          aria-label="Previous"
+        >
+          <ChevronLeft className="w-6 h-6" />
+        </button>
 
-<button
-  onClick={() => scroll("right")}
-  className="hidden lg:block absolute right-2 sm:right-6 lg:right-10 top-1/2 -translate-y-1/2 z-20
+        <button
+          onClick={() => scroll("right")}
+          className="hidden lg:block absolute right-2 sm:right-6  top-1/2 -translate-y-1/2 z-20
              bg-white hover:bg-gradient-to-r hover:from-red-600 hover:to-red-700
              text-red-600 hover:text-white p-3.5 lg:p-4 rounded-full
              shadow-xl transition-all duration-300 hover:scale-110
              border border-red-100"
-  aria-label="Next"
->
-  <ChevronRight className="w-6 h-6" />
-</button>
-
+          aria-label="Next"
+        >
+          <ChevronRight className="w-6 h-6" />
+        </button>
 
         {/* Content constrained */}
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-7xl mx-auto lg:px-20">
           <div className="relative ">
             <div
               ref={scrollContainerRef}
@@ -146,11 +144,11 @@ const ResidentialProjects = () => {
               {projects.map((project) => (
                 <div
                   key={project.id}
-                  className="min-w-[280px] sm:min-w-[340px] lg:min-w-[400px] group cursor-pointer"
+                  className="min-w-[250px] lg:min-w-[300px] group cursor-pointer"
                 >
-                  <div className="relative bg-white rounded-2xl sm:rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-500 transform hover:-translate-y-1 sm:hover:-translate-y-2">
+                  <div className="relative bg-white rounded-xl sm:rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-500 transform hover:-translate-y-1 sm:hover:-translate-y-2">
                     {/* Image */}
-                    <div className="relative h-52 sm:h-64 lg:h-80 overflow-hidden">
+                    <div className="relative h-52 lg:h-64 overflow-hidden">
                       <img
                         src={project.image}
                         alt={project.title}
@@ -173,7 +171,7 @@ const ResidentialProjects = () => {
 
                     {/* CTA */}
                     <div className="p-4 sm:p-6 bg-gradient-to-br from-white to-red-50">
-                      <button className="w-full bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white font-medium text-sm sm:text-base py-2.5 sm:py-3 px-5 sm:px-6 rounded-xl transition-all duration-300 shadow-md hover:shadow-xl transform hover:scale-[1.02]">
+                      <button className="w-full bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white font-medium text-sm py-2.5 px-5  rounded-xl transition-all duration-300 shadow-md hover:shadow-xl transform hover:scale-[1.02]">
                         Explore Project
                       </button>
                     </div>

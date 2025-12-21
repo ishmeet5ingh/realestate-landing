@@ -1,35 +1,24 @@
 // src/App.jsx
 import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import Hero from "./components/HomeHero";
-import WhyChooseUs from "./components/WhyChooseUs";
-import PropertyShowcase from "./components/PropertyShowcase";
-import ResidentialProjects from "./components/ResidentialProjects";
-import TopCommercialProjects from "./components/TopCommercialProjects";
-import ContactUs from "./components/ContactUs";
-import BottomCardsMobile from "./components/BottomCardsMobile";
-import StatsExperience from "./components/StatsExperience";
-import WhyChooseUs2 from "./components/WhyChooseUs2";
-import Builders from "./components/Builders.jsx";
+import HomePage from "./pages/HomePage";
+import NewLaunchPage from "./pages/NewLaunchPage";
 
 export default function App() {
   return (
-    <div className="min-h-screen overflow-x-hidden">
-      <Header />
-      <main>
-        <Hero />
-        <BottomCardsMobile />
-        <StatsExperience/>
-        {/* <PropertyShowcase/> */}
-        {/* <WhyChooseUs /> */}/
-        <ResidentialProjects />
-        <TopCommercialProjects/>
-        <WhyChooseUs2/>
-        <Builders/>
-        {/* <ContactUs /> */}
-      </main>
-      <Footer />
-    </div>
+    <BrowserRouter>
+      <div className="min-h-screen overflow-x-hidden">
+        <Header />
+        <main>
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/new-launch/:slug" element={<NewLaunchPage />} />
+          </Routes>
+        </main>
+        <Footer />
+      </div>
+    </BrowserRouter>
   );
 }

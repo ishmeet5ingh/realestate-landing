@@ -8,7 +8,7 @@ export default function StatsExperience() {
       <div className="absolute inset-0 bg-[url('/pattern.webp')] bg-cover bg-center opacity-[0.08]" />
       {/* If you don't have pattern.webp, remove the line above or replace with your own pattern. */}
 
-      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-10">
+      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-20">
         <div className="grid grid-cols-1 lg:grid-cols-3 items-center gap-10 lg:gap-6">
           {/* Left stats (from left) */}
           <motion.div
@@ -19,19 +19,19 @@ export default function StatsExperience() {
             className="flex flex-col gap-10"
           >
             <div className="text-center lg:text-left">
-              <div className="text-4xl sm:text-5xl font-semibold text-teal-500">
+              <div className="text-4xl sm:text-5xl font-semibold text-red-500">
                 1000+
               </div>
-              <div className="mt-2 text-sm sm:text-base font-medium text-gray-600 tracking-wide">
+              <div className="mt-2 text-sm sm:text-base font-medium text-red-600 tracking-wide">
                 Clients who turned their property goals into reality with us
               </div>
             </div>
 
             <div className="text-center lg:text-left">
-              <div className="text-4xl sm:text-5xl font-semibold text-teal-500">
+              <div className="text-4xl sm:text-5xl font-semibold text-red-500">
                 1 Million
               </div>
-              <div className="mt-2 text-sm sm:text-base font-medium text-gray-600 tracking-wide">
+              <div className="mt-2 text-sm sm:text-base font-medium text-red-600 tracking-wide">
                 Sqft of area sold
               </div>
             </div>
@@ -42,7 +42,7 @@ export default function StatsExperience() {
             <div
               className="text-[120px] sm:text-[160px] lg:text-[200px] font-extrabold leading-none"
               style={{
-                backgroundImage: "url('/commercial/Omaxe-Chandan-o-chowk.jpeg')",
+                backgroundImage: "url('/commercial/chandani.jpeg')",
                 backgroundSize: "cover",
                 backgroundPosition: "center",
                 WebkitBackgroundClip: "text",
@@ -53,7 +53,7 @@ export default function StatsExperience() {
               10
             </div>
 
-            <div className="mt-2 text-base sm:text-lg font-semibold tracking-[0.25em] text-gray-800">
+            <div className="mt-2 text-base sm:text-lg font-semibold tracking-[0.25em] text-red-800">
               YEARS OF EXPERIENCE
             </div>
           </div>
@@ -67,19 +67,19 @@ export default function StatsExperience() {
             className="flex flex-col gap-10"
           >
             <div className="text-center lg:text-right">
-              <div className="text-4xl sm:text-5xl font-semibold text-teal-500">
+              <div className="text-4xl sm:text-5xl font-semibold text-red-500">
                 30+
               </div>
-              <div className="mt-2 text-sm sm:text-base font-medium text-gray-600 tracking-wide">
+              <div className="mt-2 text-sm sm:text-base font-medium text-red-600 tracking-wide">
                 Industry experts
               </div>
             </div>
 
             <div className="text-center lg:text-right">
-              <div className="text-4xl sm:text-5xl font-semibold text-teal-500">
+              <div className="text-4xl sm:text-5xl font-semibold text-red-500">
                 20+
               </div>
-              <div className="mt-2 text-sm sm:text-base font-medium text-gray-600 tracking-wide">
+              <div className="mt-2 text-sm sm:text-base font-medium text-red-600 tracking-wide">
                 Renowned builder collaborations
               </div>
             </div>
