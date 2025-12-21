@@ -346,7 +346,7 @@ const PropertyShowcase = () => {
       viewport={{ once: true, amount: 0.2 }}
       transition={{ duration: 0.7, ease: "easeOut" }}
     >
-      <div className="max-w-[1350px] mx-auto">
+      <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="mb-5 sm:mb-8">
           <h1 className="text-xl sm:text-3xl lg:text-4xl font-semibold text-black mb-3 sm:mb-4">

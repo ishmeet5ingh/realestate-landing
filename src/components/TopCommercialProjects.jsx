@@ -9,33 +9,27 @@ const TopCommercialProjects = () => {
   const projects = [
     {
       id: 1,
-      developer: "M3M",
-      title: "M3M Atrium 57",
-      image: "/commercial/m3matrium57.webp",
+      developer: "SPJ",
+      title: "Vedatam",
+      image: "/commercial/vedatamspj.webp",
     },
-    {
+     {
       id: 2,
-      developer: "M3M",
-      title: "M3M Paragon 57",
-      image: "/commercial/m3mparagon57.webp",
-    },
-    {
-      id: 3,
-      developer: "M3M",
-      title: "M3M Route 65",
-      image: "/commercial/m3mroute65.webp",
-    },
-    {
-      id: 4,
       developer: "OMAXE",
       title: "The Omaxe State",
       image: "/commercial/TheOmaxeState.webp",
     },
     {
-      id: 5,
-      developer: "SPJ",
-      title: "Vedatam",
-      image: "/commercial/vedatamspj.webp",
+      id: 3,
+      developer: "Omaxe",
+      title: "Chandni Chowk",
+      image: "/commercial/Omaxe-Chandan-o-chowk.jpeg",
+    },
+    {
+      id: 4,
+      developer: "AIPL",
+      title: "Joy Central",
+      image: "/commercial/aipl-joy-central.jpg",
     },
   ];
 
@@ -60,7 +54,7 @@ const TopCommercialProjects = () => {
 
   return (
     <section className="bg-white text-black py-10 sm:py-14 lg:py-16 font-display overflow-hidden">
-      <div className="max-w-[1350px] mx-auto">
+      <div className="max-w-7xl mx-auto">
         {/* Header row (kept same) */}
         <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-4 sm:gap-6 px-4 sm:px-6 ">
           <div className="max-w-2xl">

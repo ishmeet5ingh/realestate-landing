@@ -17,7 +17,7 @@ export default function Builders() {
 
   return (
     <section className="bg-gray-50 py-12 sm:py-16 lg:py-20 font-display overflow-hidden">
-      <div className="max-w-[1350px] mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-10 sm:mb-12">
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-gray-900">
@@ -38,10 +38,6 @@ export default function Builders() {
 
         {/* Infinite scroll container */}
         <div className="relative">
-          {/* Gradient overlays */}
-          <div className="absolute left-0 top-0 bottom-0 w-20 sm:w-32 bg-gradient-to-r from-gray-50 to-transparent z-10" />
-          <div className="absolute right-0 top-0 bottom-0 w-20 sm:w-32 bg-gradient-to-l from-gray-50 to-transparent z-10" />
-
           {/* Scrolling wrapper - reduced gap */}
           <div className="flex overflow-hidden">
             <div className="flex animate-scroll gap-4 sm:gap-6 lg:gap-8">
@@ -54,7 +50,7 @@ export default function Builders() {
                   <img
                     src={builder.logo}
                     alt={builder.name}
-                    className="max-w-full max-h-full object-contain grayscale hover:grayscale-0 transition-all"
+                    className="max-w-full max-h-full object-contain transition-all"
                   />
                 </div>
               ))}
@@ -68,7 +64,7 @@ export default function Builders() {
                   <img
                     src={builder.logo}
                     alt={builder.name}
-                    className="max-w-full max-h-full object-contain grayscale hover:grayscale-0 transition-all"
+                    className="max-w-full max-h-full object-contain  transition-all"
                   />
                 </div>
               ))}

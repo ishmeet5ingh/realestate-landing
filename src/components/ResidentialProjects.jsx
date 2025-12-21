@@ -1,52 +1,54 @@
 import React, { useEffect, useMemo, useRef, useState } from "react";
-import { ChevronLeft, ChevronRight, Building2 } from "lucide-react"; // lucide-react icons [web:492]
+import { ChevronLeft, ChevronRight, Building2 } from "lucide-react";
 
 const ResidentialProjects = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const scrollContainerRef = useRef(null);
 
-  // Only fields used by the UI now: id, title, developer, image
-const projects = [
-  {
-    id: 1,
-    developer: "PYRAMID",
-    title: "Pyramid Alban",
-    image: "/residential/pyramidalban.webp",
-  },
-  {
-    id: 2,
-    developer: "M3M",
-    title: "Altitude at Golf Estate",
-    image: "/residential/altitudeatgolfestate.webp",
-  },
-  {
-    id: 3,
-    developer: "SMARTWORLD",
-    title: "The Edition",
-    image: "/residential/smarkworldtheedition.webp",
-  },
-  {
-    id: 4,
-    developer: "M3M",
-    title: "M3M Crown",
-    image: "/residential/m3mcrown.webp",
-  },
-  {
-    id: 5,
-    developer: "SMARTWORLD",
-    title: "One DXP",
-    image: "/residential/oneduplexsmartworld.webp",
-  },
-];
+  // Updated projects array
+  const projects = [
+    {
+      id: 1,
+      developer: "M3M",
+      title: "GIC Manesar",
+      image: "/residential/m3m-gic-manesar.jpeg",
+    },
+    {
+      id: 2,
+      developer: "AURA WORLD",
+      title: "Aura World",
+      image: "/residential/aura-world.jpg",
+    },
+    {
+      id: 3,
+      developer: "SMARTWORLD",
+      title: "Sky Arc",
+      image: "/residential/smartworld-sky-arc.webp",
+    },
+    {
+      id: 4,
+      developer: "SMARTWORLD",
+      title: "The Edition",
+      image: "/residential/smartworld-the-edition.webp",
+    },
+    {
+      id: 5,
+      developer: "M3M",
+      title: "Mansion",
+      image: "/residential/m3m-mansion.webp",
+    },
+    {
+      id: 6,
+      developer: "SMARTWORLD",
+      title: "One DXP",
+      image: "/residential/oneduplexsmartworld.webp",
+    },
+  ];
 
-
-
-  // Keep scroll math aligned with card min-width + gap at each breakpoint
   const CARD = useMemo(() => {
     const isClient = typeof window !== "undefined";
     const w = isClient ? window.innerWidth : 1024;
 
-    // Match the JSX: min-w + gap below
     if (w < 640) return { width: 280, gap: 12 }; // mobile
     if (w < 1024) return { width: 340, gap: 16 }; // tablet
     return { width: 400, gap: 24 }; // desktop
@@ -78,7 +80,7 @@ const projects = [
   return (
     <section className="bg-gradient-to-br from-red-50 via-white to-red-50 py-10 sm:py-14 lg:py-20 font-display overflow-hidden">
       {/* Header */}
-      <div className="max-w-[1350px] mx-auto px-4 sm:px-6 lg:px-8 overflow-visible">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 overflow-visible">
         <div className="text-center mb-4 sm:mb-8 lg:mb-10">
           <div className="inline-flex items-center gap-2 bg-gradient-to-r from-red-600 to-red-700 text-white px-4 py-1.5 sm:px-6 sm:py-2 rounded-full text-xs sm:text-sm font-semibold mb-3 sm:mb-4 shadow-lg">
             <Building2 className="w-4 h-4" />
@@ -107,33 +109,34 @@ const projects = [
 
       {/* Carousel area */}
       <div className="relative w-full">
-        {/* Arrows hidden on small screens */}
-        <button
-          onClick={() => scroll("left")}
-          className="hidden sm:block absolute left-2 sm:left-6 lg:left-10 top-1/2 -translate-y-1/2 z-20
-                     bg-white hover:bg-gradient-to-r hover:from-red-600 hover:to-red-700
-                     text-red-600 hover:text-white p-3.5 lg:p-4 rounded-full
-                     shadow-xl transition-all duration-300 hover:scale-110
-                     border border-red-100"
-          aria-label="Previous"
-        >
-          <ChevronLeft className="w-6 h-6" />
-        </button>
 
-        <button
-          onClick={() => scroll("right")}
-          className="hidden sm:block absolute right-2 sm:right-6 lg:right-10 top-1/2 -translate-y-1/2 z-20
-                     bg-white hover:bg-gradient-to-r hover:from-red-600 hover:to-red-700
-                     text-red-600 hover:text-white p-3.5 lg:p-4 rounded-full
-                     shadow-xl transition-all duration-300 hover:scale-110
-                     border border-red-100"
-          aria-label="Next"
-        >
-          <ChevronRight className="w-6 h-6" />
-        </button>
+<button
+  onClick={() => scroll("left")}
+  className="hidden lg:block absolute left-2 sm:left-6 lg:left-10 top-1/2 -translate-y-1/2 z-20
+             bg-white hover:bg-gradient-to-r hover:from-red-600 hover:to-red-700
+             text-red-600 hover:text-white p-3.5 lg:p-4 rounded-full
+             shadow-xl transition-all duration-300 hover:scale-110
+             border border-red-100"
+  aria-label="Previous"
+>
+  <ChevronLeft className="w-6 h-6" />
+</button>
+
+<button
+  onClick={() => scroll("right")}
+  className="hidden lg:block absolute right-2 sm:right-6 lg:right-10 top-1/2 -translate-y-1/2 z-20
+             bg-white hover:bg-gradient-to-r hover:from-red-600 hover:to-red-700
+             text-red-600 hover:text-white p-3.5 lg:p-4 rounded-full
+             shadow-xl transition-all duration-300 hover:scale-110
+             border border-red-100"
+  aria-label="Next"
+>
+  <ChevronRight className="w-6 h-6" />
+</button>
+
 
         {/* Content constrained */}
-        <div className="max-w-[1350px] mx-auto">
+        <div className="max-w-7xl mx-auto">
           <div className="relative ">
             <div
               ref={scrollContainerRef}
@@ -145,7 +148,7 @@ const projects = [
                   key={project.id}
                   className="min-w-[280px] sm:min-w-[340px] lg:min-w-[400px] group cursor-pointer"
                 >
-                  <div className="relative bg-white rounded-2xl sm:rounded-3xl overflow-hidden shadow-md  hover:shadow-xl transition-all duration-500 transform hover:-translate-y-1 sm:hover:-translate-y-2">
+                  <div className="relative bg-white rounded-2xl sm:rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-500 transform hover:-translate-y-1 sm:hover:-translate-y-2">
                     {/* Image */}
                     <div className="relative h-52 sm:h-64 lg:h-80 overflow-hidden">
                       <img
@@ -156,7 +159,7 @@ const projects = [
 
                       <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/40 to-transparent" />
 
-                      {/* ONLY 2 texts (developer + title) */}
+                      {/* Developer + title */}
                       <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-6">
                         <div className="inline-flex items-center bg-teal-500/90 text-white px-4 py-2 rounded-md text-xs font-medium">
                           {project.developer}

@@ -8,7 +8,7 @@ export default function StatsExperience() {
       <div className="absolute inset-0 bg-[url('/pattern.webp')] bg-cover bg-center opacity-[0.08]" />
       {/* If you don't have pattern.webp, remove the line above or replace with your own pattern. */}
 
-      <div className="relative mx-auto max-w-[1350px] px-4 sm:px-6 lg:px-10">
+      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-10">
         <div className="grid grid-cols-1 lg:grid-cols-3 items-center gap-10 lg:gap-6">
           {/* Left stats (from left) */}
           <motion.div
@@ -37,14 +37,12 @@ export default function StatsExperience() {
             </div>
           </motion.div>
 
-          {/* Center (stays) */}
+          {/* Center (10 with project image fill) */}
           <div className="flex flex-col items-center justify-center text-center">
-            {/* “10” with image fill (background-clip: text) */}
             <div
               className="text-[120px] sm:text-[160px] lg:text-[200px] font-extrabold leading-none"
               style={{
-                backgroundImage:
-                  "url(https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1400&q=60)",
+                backgroundImage: "url('/commercial/Omaxe-Chandan-o-chowk.jpeg')",
                 backgroundSize: "cover",
                 backgroundPosition: "center",
                 WebkitBackgroundClip: "text",
